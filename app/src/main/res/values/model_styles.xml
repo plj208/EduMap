@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LoadingDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowMinWidthMajor">50%</item>
+        <item name="windowMinWidthMinor">50%</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:colorBackground"></item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground"></item>
+    </style>
+
+
+</resources>
