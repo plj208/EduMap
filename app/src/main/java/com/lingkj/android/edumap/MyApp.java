@@ -5,6 +5,7 @@ import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 
 import com.facebook.stetho.Stetho;
+import com.lingkj.android.edumap.utils.Constant;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreater;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreater;
@@ -14,6 +15,7 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
+import com.tencent.bugly.crashreport.CrashReport;
 
 /**
  * Created by panlijun on 2018/5/2.
@@ -53,6 +55,7 @@ public class MyApp extends MultiDexApplication {
         }
 //        RxJavaPlugins.setErrorHandler(new Thread.UncaughtExceptionHandler(){});
 
+        CrashReport.initCrashReport(getApplicationContext(), Constant.BUGLY_APPID, false);
 
     }
 
