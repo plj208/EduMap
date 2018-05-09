@@ -1,7 +1,6 @@
 package com.lingkj.android.edumap.net;
 
 import com.google.gson.JsonObject;
-import com.lingkj.android.edumap.bean.test;
 
 import org.json.JSONObject;
 
