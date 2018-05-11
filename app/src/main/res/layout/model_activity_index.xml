@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tl="http://schemas.android.com/apk/res-auto">
-    <FrameLayout
-        android:id="@+id/fl_body"
+    android:orientation="vertical">
+
+
+    <com.lingkj.android.edumap.customview.NoScrollViewPager
+        android:id="@+id/vp_viewpager"
         android:layout_width="match_parent"
-        android:layout_above="@+id/tab_layout"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"></com.lingkj.android.edumap.customview.NoScrollViewPager>
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:id="@+id/fr_container"-->
+    <!--android:layout_height="wrap_content"></FrameLayout>-->
+
     <com.flyco.tablayout.CommonTabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:padding="5dp"
-        android:layout_alignParentBottom="true"
-        tl:tl_indicator_height="0dp"
         tl:tl_iconHeight="20dp"
         tl:tl_iconWidth="20dp"
         tl:tl_indicator_color="#cccccc"
+        tl:tl_indicator_height="0dp"
         tl:tl_textSelectColor="#ff0000"
         tl:tl_textUnselectColor="#000000"
         tl:tl_textsize="11sp"
         tl:tl_underline_height="0dp" />
-</RelativeLayout>
+</LinearLayout>
