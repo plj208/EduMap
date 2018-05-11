@@ -13,12 +13,16 @@ import android.widget.TextView;
 
 import com.lingkj.android.edumap.R;
 import com.lingkj.android.edumap.utils.DialogUtils;
+import com.lingkj.android.edumap.utils.ToastUtils;
+
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * @author panlijun
  * @detail activity基类
  */
-public abstract  class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
 
     private Context mContext;
@@ -34,11 +38,17 @@ public abstract  class BaseActivity extends AppCompatActivity {
 
     private ImageView mErrorImage;
 
+    private Unbinder binder;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView();
         initRealContent();
+        binder = ButterKnife.bind(this);
+        Toolbar toolbar = findViewById(R.id.baseToolbar);
+        setUpToolbar(toolbar);
+
         this.initView();
     }
 
@@ -54,25 +64,26 @@ public abstract  class BaseActivity extends AppCompatActivity {
     }
 
     protected abstract int getLayoutId();
+
     protected abstract void initView();
+
     protected abstract boolean showBack();
 
-    //初始化view
 
     protected void setUpToolbar(Toolbar toolbar) {
         if (toolbar != null) {
             if (showBack()) {
                 setSupportActionBar(toolbar);
-                getSupportActionBar().setDisplayShowTitleEnabled(false);
+                getSupportActionBar().setDisplayShowTitleEnabled(true);
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//                toolbar.setNavigationIcon(R.drawable.ic_back);
+                toolbar.setNavigationIcon(R.mipmap.ic_launcher);
                 toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         onBackPressed();
                     }
                 });
-            }else{
+            } else {
                 toolbar.setVisibility(View.GONE);
             }
         }
@@ -87,7 +98,6 @@ public abstract  class BaseActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
     }
-
 
 
     protected void showError() {
@@ -136,4 +146,9 @@ public abstract  class BaseActivity extends AppCompatActivity {
 
     protected abstract void errorReLoad();
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        binder.unbind();
+    }
 }

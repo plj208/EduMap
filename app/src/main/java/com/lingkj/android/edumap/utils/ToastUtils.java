@@ -12,7 +12,7 @@ import android.widget.Toast;
  */
 public class ToastUtils {
 
-    protected void showShortToast(Context context,String msg) {
+    public static  void showShortToast(Context context,String msg) {
 
         if (Build.VERSION.SDK_INT >= 20) {
 

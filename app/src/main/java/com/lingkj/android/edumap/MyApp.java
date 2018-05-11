@@ -5,7 +5,7 @@ import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 
 import com.facebook.stetho.Stetho;
-import com.lingkj.android.edumap.utils.Constant;
+import com.lingkj.android.edumap.utils.IDConstant;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreater;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreater;
@@ -55,7 +55,7 @@ public class MyApp extends MultiDexApplication {
         }
 //        RxJavaPlugins.setErrorHandler(new Thread.UncaughtExceptionHandler(){});
 
-        CrashReport.initCrashReport(getApplicationContext(), Constant.BUGLY_APPID, false);
+        CrashReport.initCrashReport(getApplicationContext(), IDConstant.BUGLY_APPID, false);
 
     }
 
