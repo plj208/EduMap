@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">baidu</string>
+
+    <!--百度云推送绑定的一些错误-->
+    <string name="baidu_push_err_10001">当前网络不可用，请检查网络</string>
+    <string name="baidu_push_err_10002">服务不可用，连接 server 失败</string>
+    <string name="baidu_push_err_10003">服务不可用，503 错误</string>
+    <string name="baidu_push_err_10101">应用集成方式错误，请检查各项声明和权限定义</string>
+    <string name="baidu_push_err_20001">未知错误</string>
+    <string name="baidu_push_err_30600">服务端内部出现错误</string>
+    <string name="baidu_push_err_30601">非法函数请求，请检查您的请求内容</string>
+    <string name="baidu_push_err_30602">请求参数错误，请检查您的参数</string>
+    <string name="baidu_push_err_30603">非法构造请求，服务端验证失败</string>
+    <string name="baidu_push_err_30605">请求的数据在服务端不存在</string>
+    <string name="baidu_push_err_30608">绑定关系不存在或未找到</string>
+    <string name="baidu_push_err_30609">一个百度账户绑定设备超出个数限制(多台设备登录同一个百度账户)</string>
+    <string name="baidu_push_err_30612">百度账户绑定应用时被禁止，需要白名单授权</string>
+
+</resources>

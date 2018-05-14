@@ -10,13 +10,17 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.lingkj.android.edumap.R;
+
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * @author panlijun
  * @detail fragment基类
  */
-public abstract  class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
     private ViewGroup mContainerView;
 
 
@@ -28,18 +32,24 @@ public abstract  class BaseFragment extends Fragment {
 
     private ImageView mErrorImage;
 
+    Unbinder unBinder;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view= inflater.inflate(R.layout.model_fragment_base, container, false);
-        mContainerView=view.findViewById(R.id.fl_container);
-        initRealContent(inflater);
-        return super.onCreateView(inflater, container, savedInstanceState);
+
+        View view = inflater.inflate(getContentView(), container, false);
+        return view;
     }
-    private void initRealContent(LayoutInflater inflater){
-        inflater.inflate(getContentView(),mContainerView);
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        unBinder = ButterKnife.bind(this, view);
+        initView();
     }
+
     protected abstract int getContentView();
 
 
@@ -79,10 +89,14 @@ public abstract  class BaseFragment extends Fragment {
             mErrorView.setVisibility(View.GONE);
         }
     }
+    protected abstract  void initView();
 
     protected abstract void onReLoad();
 
 
-
-
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unBinder.unbind();
+    }
 }
