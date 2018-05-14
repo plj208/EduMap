@@ -52,8 +52,8 @@ dependencies {
     //权限管理
     implementation 'pub.devrel:easypermissions:1.1.1'
     //locat管理
-    debugCompile 'com.apkfuns.logutils:library:1.5.1.1'
-    releaseCompile 'com.apkfuns.logutils:logutils-no-op:1.5.1.1'
+    debugImplementation 'com.apkfuns.logutils:library:1.5.1.1'
+    releaseImplementation 'com.apkfuns.logutils:logutils-no-op:1.5.1.1'
     //图片加载
     implementation 'com.github.bumptech.glide:glide:4.7.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
