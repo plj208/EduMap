@@ -8,8 +8,7 @@
         android:id="@+id/sp_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srlAccentColor="@color/white"
-        >
+        app:srlAccentColor="@color/white">
 
         <com.scwang.smartrefresh.layout.header.ClassicsHeader
             android:layout_width="match_parent"
@@ -20,8 +19,8 @@
 
 
         <com.youth.banner.Banner
-            android:layout_width="match_parent"
             android:id="@+id/bn_img"
+            android:layout_width="match_parent"
             android:layout_height="150dp"></com.youth.banner.Banner>
 
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>

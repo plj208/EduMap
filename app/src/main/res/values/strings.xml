@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">EduMap</string>
+
+    <string name="text_institutions_num">机构数量</string>
+    <string name="text_course_num">课程数量</string>
+    <string name="text_course_consultant">课程顾问</string>
+    <string name="text_match_record">匹配记录</string>
+    <string name="text_quick_choose_course">立即选课</string>
+    <string name="text_commit_intent">提交意向</string>
+    <string name="text_customer_management">顾客接洽</string>
+    <string name="text_match_course">匹配课程</string>
+    <string name="text_commit_match_report">交付报告</string>
+    <string name="text_confirm_intent">确定意向</string>
+    <string name="text_report_take_class">报告上课</string>
+    <string name="text_device_feedback">评价反馈</string>
+
+    <string-array name="app_bottom_tab_name">
+        <item>首页</item>
+        <item>活动</item>
+        <item>选课帮</item>
+        <item>我的</item>
+    </string-array>
 </resources>

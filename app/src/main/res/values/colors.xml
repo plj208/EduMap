@@ -4,6 +4,11 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-
+    <color name="backgroundColor">#ECECEC</color>
     <color name="white">#ffffff</color>
+    <color name="black_333333">#333333</color>
+    <color name="gray_e3e3e3">#E3E3E3</color>
+    <color name="yellow_f3802c">#F3802C</color>
+    <color name="gray_999999">#999999</color>
+    <color name="gray_cccccc">#cccccc</color>
 </resources>

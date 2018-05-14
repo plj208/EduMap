@@ -1,20 +1,8 @@
 package com.lingkj.android.edumap.ui.index.fragment;
 
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.facebook.stetho.common.LogUtil;
 import com.lingkj.android.edumap.R;
 import com.lingkj.android.edumap.base.BaseFragment;
-import com.lingkj.android.edumap.base.LazyFragment;
 import com.lingkj.android.edumap.utils.GlideImageLoader;
-import com.lingkj.android.edumap.utils.ToastUtils;
-import com.scwang.smartrefresh.header.MaterialHeader;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.youth.banner.Banner;
 
@@ -35,7 +23,7 @@ public class IndexFragment extends BaseFragment {
     @BindView(R.id.bn_img)
     Banner mBanner;
 
-    private List<Integer> mImgs=new ArrayList<>();
+    private List<Integer> mImgs = new ArrayList<>();
 
     @Override
     protected int getContentView() {
