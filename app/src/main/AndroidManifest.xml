@@ -74,6 +74,11 @@
         </activity>
 
 
+        <activity android:name=".ui.index.activity.ChooseCityActivity">
+
+
+        </activity>
+
     </application>
 
 </manifest>

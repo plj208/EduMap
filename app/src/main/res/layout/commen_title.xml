@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                            xmlns:app="http://schemas.android.com/apk/res-auto"
-                                            xmlns:tools="http://schemas.android.com/tools"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:fitsSystemWindows="true">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true">
 
     <android.support.v7.widget.Toolbar
-            android:id="@+id/baseToolbar"
-            android:layout_width="match_parent"
-            android:minHeight="45dp"
-            android:elevation="0dp"
-            android:layout_height="45dp">
+        android:id="@+id/baseToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:elevation="0dp"
+        android:minHeight="45dp"
+        >
 
         <TextView
-                android:id="@+id/activityTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textSize="18sp"
-                tools:text="XXXXXX"/>
+            android:id="@+id/activityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/city_current"
+            android:textSize="@dimen/sp_17" />
     </android.support.v7.widget.Toolbar>
+
     <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-    />
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
 </android.support.design.widget.AppBarLayout>

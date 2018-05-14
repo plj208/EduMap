@@ -9,8 +9,16 @@
         <item name="android:colorBackground"></item>
         <item name="android:backgroundDimEnabled">false</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground"></item>
     </style>
 
+
+    <declare-styleable name="LoaderLayout">
+        <attr name="LoadingImage" format="reference" />
+        <attr name="LoadErrImage" format="reference" />
+        <attr name="LoadNoDataImage" format="reference" />
+        <attr name="LoadingText" format="string|reference" />
+        <attr name="LoadErrText" format="string|reference" />
+        <attr name="LoadNoDataText" format="string|reference" />
+    </declare-styleable>
 
 </resources>

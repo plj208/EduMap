@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/line_bg"
+    android:layout_height="match_parent">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        app:srcCompat="@mipmap/icon_location" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_11"
+                        android:layout_weight="1"
+                        android:text="当前定位"
+                        android:textColor="@color/city_current"
+                        android:textSize="@dimen/sp_15" />
+
+                    <ImageView
+                        android:id="@+id/iv_refresh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_13"
+                        app:srcCompat="@mipmap/city_refresh" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="#EEEEEE"
+                    android:paddingBottom="@dimen/dp_13"
+                    android:paddingLeft="@dimen/dp_17"
+                    android:paddingTop="@dimen/dp_18"
+                    android:text="@string/city_open"
+                    android:textSize="@dimen/sp_15" />
+
+                <com.lingkj.android.edumap.customview.NoWrapGridView
+                    android:id="@+id/gv_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="4"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:horizontalSpacing="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    tools:listitem="@layout/item_model_choosecity" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <!--</com.lingkj.android.edumap.customview.LoaderLayout>-->
+
+</android.support.constraint.ConstraintLayout>

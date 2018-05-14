@@ -12,18 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"></com.lingkj.android.edumap.customview.NoScrollViewPager>
-    <!--<FrameLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_weight="1"-->
-    <!--android:id="@+id/fr_container"-->
-    <!--android:layout_height="wrap_content"></FrameLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_bg" />
 
     <com.flyco.tablayout.CommonTabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:padding="5dp"
-        tl:tl_iconHeight="20dp"
+        tl:tl_iconHeight="24dp"
         tl:tl_iconWidth="20dp"
         tl:tl_indicator_color="#cccccc"
         tl:tl_indicator_height="0dp"

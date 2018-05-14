@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">EduMap</string>
+
+
+
+
+    <!--选择城市模块-->
+    <string name="city_current">当前城市</string>
+    <string name="city_open">已开通城市</string>
 </resources>

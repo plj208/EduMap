@@ -15,6 +15,9 @@ import com.lingkj.android.edumap.R;
 import com.lingkj.android.edumap.utils.DialogUtils;
 import com.lingkj.android.edumap.utils.ToastUtils;
 
+import java.lang.reflect.Field;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -40,14 +43,17 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     private Unbinder binder;
 
+    @BindView(R.id.baseToolbar)
+    Toolbar toolbar;
+    @BindView(R.id.activityTitle)
+    TextView tvTitle;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView();
         initRealContent();
         binder = ButterKnife.bind(this);
-        Toolbar toolbar = findViewById(R.id.baseToolbar);
-        setUpToolbar(toolbar);
+//        setUpToolbar(toolbar);
 
         this.initView();
     }
@@ -67,27 +73,6 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected abstract void initView();
 
-    protected abstract boolean showBack();
-
-
-    protected void setUpToolbar(Toolbar toolbar) {
-        if (toolbar != null) {
-            if (showBack()) {
-                setSupportActionBar(toolbar);
-                getSupportActionBar().setDisplayShowTitleEnabled(true);
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-                toolbar.setNavigationIcon(R.mipmap.ic_launcher);
-                toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        onBackPressed();
-                    }
-                });
-            } else {
-                toolbar.setVisibility(View.GONE);
-            }
-        }
-    }
 
     @Override
     protected void onResume() {
@@ -144,7 +129,55 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
+//    /**
+//     * 设置Toolbar
+//     *
+//     * @param title            标题
+//     * @param navClickListener 返回事件
+//     */
+//    protected void setToolbar(Context context, String title, View.OnClickListener navClickListener) {
+//        try {
+//            Class clazz = Class.forName(context.getPackageName() + ".R$id");
+//            if (clazz != null) {
+//                Field toolbarField = clazz.getField("toolbar");
+//                if (toolbarField != null) {
+//                    Toolbar toolbar = findViewById(toolbarField.getInt(null));
+//                    toolbar.setTitle(title);
+//                    setSupportActionBar(toolbar);
+//                    toolbar.setNavigationOnClickListener(navClickListener);
+//                }
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+
+//    protected abstract boolean showBack();
+
+
+    protected void setUpToolbar(int resId, String title) {
+        if (toolbar != null) {
+            toolbar.setNavigationIcon(resId);
+            toolbar.setTitle("");
+            tvTitle.setText(title);
+            setSupportActionBar(toolbar);
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onBackPressed();
+                }
+            });
+        }
+    }
+
+
     protected abstract void errorReLoad();
+    protected  boolean showBack(){
+
+        return false;
+    };
+
 
     @Override
     protected void onDestroy() {

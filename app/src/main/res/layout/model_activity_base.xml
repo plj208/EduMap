@@ -5,6 +5,11 @@
               android:orientation="vertical">
 
     <include layout="@layout/commen_title" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_bg"
+        />
 
     <FrameLayout
         android:id="@+id/fl_container"

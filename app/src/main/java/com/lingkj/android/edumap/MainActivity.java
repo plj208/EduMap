@@ -55,10 +55,6 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected boolean showBack() {
-        return false;
-    }
 
     @Override
     protected void errorReLoad() {
@@ -70,4 +66,5 @@ public class MainActivity extends BaseActivity {
         super.onDestroy();
         mCompositeDisposable.clear();
     }
+
 }
