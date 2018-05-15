@@ -27,6 +27,7 @@ public class BaseListViewAdapter<D extends BaseViewHolder<D>> extends BaseAdapte
         this.mContext=context;
         this.mLayoutId=layoutId;
 
+
     }
 
     @Override
