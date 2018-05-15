@@ -53,8 +53,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView();
         initRealContent();
         binder = ButterKnife.bind(this);
-//        setUpToolbar(toolbar);
-
         this.initView();
     }
 

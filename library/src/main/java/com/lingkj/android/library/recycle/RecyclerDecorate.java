@@ -26,6 +26,11 @@ public class RecyclerDecorate extends RecyclerView.ItemDecoration {
         mDivider=new ColorDrawable(Color.TRANSPARENT);
     }
 
+    public  RecyclerDecorate(int color){
+        super();
+        mDivider=new ColorDrawable(color);
+    }
+
     @Override
     public void onDraw(Canvas c, RecyclerView parent, RecyclerView.State state) {
         if (parent.getLayoutManager() == null) {
