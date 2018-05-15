@@ -154,7 +154,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 //    protected abstract boolean showBack();
 
 
-    protected void setUpToolbar(int resId, String title) {
+    public void setUpToolbar(int resId, String title) {
         if (toolbar != null) {
             toolbar.setNavigationIcon(resId);
             toolbar.setTitle("");
@@ -176,6 +176,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         return false;
     };
 
+    public Toolbar getToolbar() {
+        return toolbar;
+    }
 
     @Override
     protected void onDestroy() {
