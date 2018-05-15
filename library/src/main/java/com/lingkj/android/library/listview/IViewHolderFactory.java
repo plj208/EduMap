@@ -9,6 +9,7 @@ import android.view.View;
  * detail:
  */
 public interface IViewHolderFactory<T> {
+
     T generatorViewHolder(View view,int  pos);
 
 }

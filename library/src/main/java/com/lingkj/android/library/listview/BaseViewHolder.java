@@ -15,5 +15,6 @@ public abstract  class BaseViewHolder<D> {
 
     public abstract void setData(D d);
 
+
 }
 
