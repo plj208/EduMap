@@ -10,5 +10,6 @@
 
 
     <color name="city_current">#333333</color>
-    <color name="line_bg">#ececec</color>
+    <color name="app_bg">#ececec</color>
+    <color name="line_bg">#E3E3E3</color>
 </resources>

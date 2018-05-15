@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <CheckBox
+        android:button="@null"
+        android:id="@+id/tv_left"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_61"
+        android:gravity="center"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/city_current"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:background="@drawable/item_sort_style"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        />
+</android.support.constraint.ConstraintLayout>

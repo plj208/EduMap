@@ -26,9 +26,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:support-v4:27.1.1'
-    compile files('libs/Baidu_Mtj_3.9.0.1.jar')
-    compile files('libs/BaiduLBS_Android.jar')
-    compile files('libs/httpmime-4.1.2.jar')
+    implementation files('libs/Baidu_Mtj_3.9.0.1.jar')
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/httpmime-4.1.2.jar')
 }

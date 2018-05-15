@@ -27,7 +27,7 @@ import butterknife.ButterKnife;
 /**
  * author: panlijun
  * time: 2018/5/14 上午9:46
- * detail:
+ * detail:选择地址页面
  */
 public class ChooseCityActivity extends BaseActivity implements ChooseCityConstract.View {
     private ChooseCityPresent mPresent;

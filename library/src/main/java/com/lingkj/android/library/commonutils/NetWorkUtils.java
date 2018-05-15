@@ -13,6 +13,15 @@ import java.util.regex.Pattern;
  * detail:网络管理工具类
  */
 public class NetWorkUtils {
+    /**
+     * 获取网络管理服务类对象
+     * @param context 上下文对象
+     * @return 网络管理服务类对象
+     */
+    private static ConnectivityManager getConnectivityManager(Context context){
+        return (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+    }
+
 
     /**
      * 检查网络是否可用
@@ -57,5 +66,22 @@ public class NetWorkUtils {
          }
          return false;
      }
+
+
+
+    /**
+     * 获取当前处于激活状态的网络类型，返回-1表示无任何连接
+     * info in this {@code NetworkInfo} pertains.
+     * @return one of {@link ConnectivityManager#TYPE_MOBILE}, {@link
+     * ConnectivityManager#TYPE_WIFI}, {@link ConnectivityManager#TYPE_WIMAX}, {@link
+     * ConnectivityManager#TYPE_ETHERNET},  {@link ConnectivityManager#TYPE_BLUETOOTH}, or other
+     * types defined by {@link ConnectivityManager}
+     */
+    public static int getActiveNetworkType(Context context){
+        NetworkInfo networkInfo = getConnectivityManager(context).getActiveNetworkInfo();
+        if(networkInfo != null)
+            return networkInfo.getType();
+        return -1;
+    }
 
 }

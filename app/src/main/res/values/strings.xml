@@ -7,4 +7,7 @@
     <!--选择城市模块-->
     <string name="city_current">当前城市</string>
     <string name="city_open">已开通城市</string>
+
+    <!--分类-->
+    <string name="sort_list">全部分类</string>
 </resources>

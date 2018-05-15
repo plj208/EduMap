@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.provider.Settings;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 
 import com.lingkj.android.library.commonutils.NetWorkUtils;
 
@@ -12,6 +14,10 @@ import java.io.File;
 
 public class SystemUtils  {
 
+    public static int dpToPx(Context context,float dp){
+        DisplayMetrics metrics = getDisplayMetrics(context);
+        return (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,dp,metrics)+0.5);
+    }
 
     /**
      * 获取文件的大小
@@ -64,4 +70,11 @@ public class SystemUtils  {
         return context.getResources().getColor(colorId);
     }
 
+
+    public static DisplayMetrics getDisplayMetrics(Context context){
+        DisplayMetrics metrics =context
+                .getResources()
+                .getDisplayMetrics();
+        return metrics;
+    }
 }
