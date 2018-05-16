@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_10">
+
+    <ImageView
+        android:id="@+id/iv_activity_list_item"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        tools:src="@tools:sample/avatars" />
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/tv_type_activity_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@+id/iv_activity_list_item"
+        android:paddingBottom="@dimen/dp_2"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_2"
+        android:text="推荐"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
+        app:rv_backgroundColor="@color/yellow_f3802c"
+        app:rv_cornerRadius="@dimen/dp_5" />
+
+    <TextView
+        android:id="@+id/tv_title_activity_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@+id/tv_type_activity_list_item"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/black_333333"
+        android:textSize="@dimen/dp_14"
+        tools:text="活动主题名称" />
+
+    <TextView
+        android:id="@+id/tv_location_activity_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title_activity_list_item"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_toRightOf="@+id/iv_activity_list_item"
+        android:drawableLeft="@mipmap/icon_location_fragment_activity_list"
+        android:drawablePadding="@dimen/dp_7"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/gray_999999"
+        android:textSize="@dimen/sp_12"
+        tools:text="北京市朝阳区望京绿地中心" />
+
+    <TextView
+        android:id="@+id/tv_time_activity_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_location_activity_list_item"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_toRightOf="@+id/iv_activity_list_item"
+        android:drawableLeft="@mipmap/icon_time_fragment_activity_list"
+        android:drawablePadding="@dimen/dp_7"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/gray_999999"
+        android:textSize="@dimen/sp_12"
+        tools:text="3月2日 周二 14:00" />
+
+    <include
+        android:id="@+id/v_line_activity_list_item"
+        layout="@layout/layout_line_e3e3e3_1dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@+id/tv_time_activity_list_item"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_toRightOf="@+id/iv_activity_list_item" />
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/tv_num_activity_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_line_activity_list_item"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@+id/iv_activity_list_item"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp_2"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_2"
+        android:textColor="@color/gray_999999"
+        android:textSize="@dimen/sp_10"
+        app:rv_cornerRadius="@dimen/dp_10"
+        app:rv_strokeColor="@color/gray_999999"
+        app:rv_strokeWidth="@dimen/dp_1"
+        tools:text="256" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_num_activity_list_item"
+        android:layout_below="@+id/v_line_activity_list_item"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_toRightOf="@+id/tv_num_activity_list_item"
+        android:gravity="center"
+        android:textColor="@color/gray_999999"
+        android:textSize="@dimen/sp_10"
+        tools:text="已报名" />
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/tv_distance_activity_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/v_line_activity_list_item"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp_2"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_2"
+        android:textColor="@color/yellow_f3802c"
+        android:textSize="@dimen/sp_10"
+        app:rv_cornerRadius="@dimen/dp_10"
+        app:rv_strokeColor="@color/yellow_f3802c"
+        app:rv_strokeWidth="@dimen/dp_1"
+        tools:text="距当前552m" />
+</RelativeLayout>

@@ -14,7 +14,7 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="16dp"
         android:src="@drawable/lefticon"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/tv_lefttext"
@@ -24,7 +24,7 @@
         android:layout_toRightOf="@id/iv_lefticon"
         android:gravity="center_vertical"
         android:padding="10dp"
-        android:textSize="16sp"/>
+        android:textSize="16sp" />
 
 
     <FrameLayout
@@ -36,22 +36,22 @@
 
         <ImageView
             android:id="@+id/iv_righticon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/righticon"/>
+            android:src="@mipmap/icon_gray_right" />
 
         <android.support.v7.widget.AppCompatCheckBox
             android:id="@+id/rightcheck"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
 
         <android.support.v7.widget.SwitchCompat
             android:id="@+id/rightswitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
     </FrameLayout>
 
     <TextView
@@ -61,7 +61,7 @@
         android:layout_toLeftOf="@id/rightlayout"
         android:gravity="center"
         android:text="1.0.0"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <View
         android:id="@+id/underline"
@@ -70,5 +70,5 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:background="#99999999"/>
+        android:background="#99999999" />
 </RelativeLayout>

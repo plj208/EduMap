@@ -21,6 +21,19 @@
         <item>活动</item>
         <item>资讯</item>
     </string-array>
+
+    <string-array name="activity_area">
+        <item>朝阳</item>
+        <item>全部</item>
+        <item>海淀</item>
+        <item>房山</item>
+        <item>丰台</item>
+        <item>顺义</item>
+        <item>西城区</item>
+        <item>东城区</item>
+        <item>通州区</item>
+    </string-array>
+
     <!--选课帮-->
     <string name="text_choose_course_title">选课帮</string>
     <string name="text_institutions_num">机构数量</string>
@@ -35,5 +48,19 @@
     <string name="text_confirm_intent">确定意向</string>
     <string name="text_report_take_class">报告上课</string>
     <string name="text_device_feedback">评价反馈</string>
+    <string name="text_help_choose_num">帮选: $s</string>
+
+    <!--我的-->
+    <string name="text_shopping_cart">购物车</string>
+    <string name="text_member_privilege">会员特权</string>
+    <string name="text_to_be_member">成为会员</string>
+    <string name="text_my_order">我的订单</string>
+    <string name="text_wallet">钱包</string>
+    <string name="text_coupon">优惠劵</string>
+    <string name="text_my_collection">我的收藏</string>
+    <string name="text_my_integral">我的积分</string>
+    <string name="text_my_evaluation">我的评价</string>
+    <string name="text_my_setting">设置</string>
+    <string name="text_help_feedback">帮助与反馈</string>
 
 </resources>
