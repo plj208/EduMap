@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <CheckBox
+    <TextView
         android:button="@null"
         android:id="@+id/tv_left"
         android:layout_width="match_parent"
@@ -16,7 +16,6 @@
         android:textColor="@color/city_current"
         android:text="TextView"
         app:layout_constraintTop_toBottomOf="parent"
-        android:background="@drawable/item_sort_style"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="parent"

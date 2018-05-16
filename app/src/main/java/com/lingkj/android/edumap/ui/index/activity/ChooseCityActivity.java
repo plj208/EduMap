@@ -68,6 +68,7 @@ public class ChooseCityActivity extends BaseActivity implements ChooseCityConstr
     }
 
 
+
     private void startRefresh() {
         ivRefresh.setOnClickListener((v) -> {
 

@@ -26,7 +26,7 @@ import butterknife.BindView;
 /**
  * author: panlijun
  * time: 2018/5/10 上午11:27
- * detail:
+ * detail:首页
  */
 public class IndexFragment extends BaseFragment {
 

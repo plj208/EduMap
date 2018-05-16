@@ -33,12 +33,9 @@ public abstract class BaseFragment extends Fragment {
     private ImageView mErrorImage;
 
     Unbinder unBinder;
-
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         View view = inflater.inflate(getContentView(), container, false);
         return view;
     }
