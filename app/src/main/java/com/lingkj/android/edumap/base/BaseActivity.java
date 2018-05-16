@@ -47,12 +47,19 @@ public abstract class BaseActivity extends AppCompatActivity {
     Toolbar toolbar;
     @BindView(R.id.activityTitle)
     TextView tvTitle;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView();
         initRealContent();
         binder = ButterKnife.bind(this);
+
+        if (showBack()) {
+            toolbar.setVisibility(View.VISIBLE);
+        } else {
+            toolbar.setVisibility(View.GONE);
+        }
         this.initView();
     }
 
@@ -171,10 +178,12 @@ public abstract class BaseActivity extends AppCompatActivity {
 
 
     protected abstract void errorReLoad();
-    protected  boolean showBack(){
 
+    protected boolean showBack() {
         return false;
-    };
+    }
+
+    ;
 
 
     @Override
