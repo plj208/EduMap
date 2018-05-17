@@ -66,7 +66,11 @@
 
 
         <activity android:name=".ui.index.activity.IndexActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
 
@@ -80,11 +84,6 @@
         <activity android:name=".ui.index.activity.SortActivity"
             android:launchMode="singleTop"
             >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
     </application>

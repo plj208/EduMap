@@ -12,11 +12,8 @@ import com.lingkj.android.edumap.base.BaseActivity;
 import com.lingkj.android.edumap.customview.NoWrapGridView;
 import com.lingkj.android.edumap.ui.index.constract.ChooseCityConstract;
 import com.lingkj.android.edumap.ui.index.constract.ChooseCityPresent;
-import com.lingkj.android.edumap.utils.ToastUtils;
 import com.lingkj.android.library.listview.BaseListViewAdapter;
-import com.lingkj.android.library.listview.BaseViewHolder;
 import com.lingkj.android.library.listview.IViewHolderFactory;
-
 
 import java.util.ArrayList;
 import java.util.List;

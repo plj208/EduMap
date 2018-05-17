@@ -31,6 +31,11 @@ public class RecyclerDecorate extends RecyclerView.ItemDecoration {
         mDivider=new ColorDrawable(color);
     }
 
+    public  RecyclerDecorate(int color,int height)
+    {
+        this.height=height;
+    }
+
     @Override
     public void onDraw(Canvas c, RecyclerView parent, RecyclerView.State state) {
         if (parent.getLayoutManager() == null) {
@@ -123,4 +128,5 @@ public class RecyclerDecorate extends RecyclerView.ItemDecoration {
     private void getLinerOffset(Rect outRect,View child,RecyclerView parent,RecyclerView.LayoutManager manager){
         outRect.set(0,0,0,height);
     }
+
 }

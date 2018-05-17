@@ -30,6 +30,7 @@ public class BaseRecycleAdapter<D, V extends BaseViewHolder<D>> extends Recycler
         this.mLayoutId = layoutId;
     }
 
+
     public BaseRecycleAdapter(int layoutId) {
         this.mLayoutId = layoutId;
     }

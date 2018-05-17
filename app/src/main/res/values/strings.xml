@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">EduMap</string>
 
-
-
+    <!--APP Tab标签名称-->
+    <string-array name="app_bottom_tab_name">
+        <item>首页</item>
+        <item>活动</item>
+        <item>选课帮</item>
+        <item>我的</item>
+    </string-array>
 
     <!--选择城市模块-->
     <string name="city_current">当前城市</string>
@@ -10,4 +15,55 @@
 
     <!--分类-->
     <string name="sort_list">全部分类</string>
+
+    <!--活动资讯-->
+    <string-array name="text_active_title">
+        <item>活动</item>
+        <item>资讯</item>
+    </string-array>
+    <!--选课帮-->
+    <string name="text_choose_course_title">选课帮</string>
+    <string name="text_institutions_num">机构数量</string>
+    <string name="text_course_num">课程数量</string>
+    <string name="text_course_consultant">课程顾问</string>
+    <string name="text_match_record">匹配记录</string>
+    <string name="text_quick_choose_course">立即选课</string>
+    <string name="text_commit_intent">提交意向</string>
+    <string name="text_customer_management">顾客接洽</string>
+    <string name="text_match_course">匹配课程</string>
+    <string name="text_commit_match_report">交付报告</string>
+    <string name="text_confirm_intent">确定意向</string>
+    <string name="text_report_take_class">报告上课</string>
+    <string name="text_device_feedback">评价反馈</string>
+
+
+    <!--首页-->
+    <string name="index_query_hint">学前教育</string>
+    <string name="all">全部</string>
+
+    <string-array name="index_text_big_sort">
+
+    <item name="index_text_big_sort_item1">升学辅导</item>
+    <item name="index_text_big_sort_item2">语言</item>
+    <item name="index_text_big_sort_item3">兴趣爱好</item>
+    <item name="index_text_big_sort_item4">学校</item>
+    <item name="index_text_big_sort_item5">职业技术</item>
+    </string-array>
+
+    <string-array name="index_text_small_sort">
+
+    <item name="index_text_small_sort_item1">英语</item>
+    <item name="index_text_small_sort_item2">小学辅导</item>
+    <item name="index_text_small_sort_item3">钢琴</item>
+    <item name="index_text_small_sort_item4">书法</item>
+    <item name="index_text_small_sort_item5">考研</item>
+    <item name="index_text_small_sort_item1">初中辅导</item>
+    <item name="index_text_small_sort_item2">芭蕾舞</item>
+    <item name="index_text_small_sort_item3">跆拳道</item>
+    <item name="index_text_small_sort_item4">少儿围棋</item>
+    <item name="index_text_small_sort_item5">全部</item>
+
+    </string-array>
+
+
 </resources>

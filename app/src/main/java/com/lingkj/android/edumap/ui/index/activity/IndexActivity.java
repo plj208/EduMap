@@ -1,12 +1,7 @@
 package com.lingkj.android.edumap.ui.index.activity;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBarDrawerToggle;
 
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
@@ -15,6 +10,8 @@ import com.lingkj.android.edumap.R;
 import com.lingkj.android.edumap.base.BaseActivity;
 import com.lingkj.android.edumap.bean.TabEntity;
 import com.lingkj.android.edumap.customview.NoScrollViewPager;
+import com.lingkj.android.edumap.ui.active.fragment.ActiveFragment;
+import com.lingkj.android.edumap.ui.chooosecourse.fragment.ChooseClassFragment;
 import com.lingkj.android.edumap.ui.index.fragment.IndexFragment;
 
 import java.util.ArrayList;
@@ -35,7 +32,7 @@ public class IndexActivity extends BaseActivity {
     private ArrayList<Fragment> mModulles;
 
 
-    private String[] mTitles = {"首页", "活动", "周边", "我的"};
+    private String[] mTitles = {"首页", "活动", "选课帮", "我的"};
     private int[] mIconUnselectIds = {
             R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher};
     private int[] mIconSelectIds = {
@@ -56,8 +53,8 @@ public class IndexActivity extends BaseActivity {
 
         mModulles = new ArrayList<>();
         mModulles.add(new IndexFragment());
-        mModulles.add(new IndexFragment());
-        mModulles.add(new IndexFragment());
+        mModulles.add(new ActiveFragment());
+        mModulles.add(new ChooseClassFragment());
         mModulles.add(new IndexFragment());
 
 

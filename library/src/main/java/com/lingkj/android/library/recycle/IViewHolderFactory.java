@@ -8,4 +8,5 @@ import android.view.View;
 
 public interface IViewHolderFactory<T> {
         T generatorViewHolder(View view, BaseViewHolder.OnItemClickListener onItemClickListener);
+
 }

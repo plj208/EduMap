@@ -20,15 +20,22 @@ import java.util.List;
  */
 public class SortDetailAdapter<D, V extends BaseViewHolder<D>> extends BaseRecycleAdapter {
     protected List<D> mDatas;
-    private int mLayoutId;
+    private int mLayoutId1;
+    private int mLayoutId2;
     private Context mContext;
 
-    public SortDetailAdapter(Context context,List<D> datas, int layoutId) {
-        this.mContext=context;
+    public SortDetailAdapter(Context context, List<D> datas, int layoutId) {
+        this.mContext = context;
         this.mDatas = datas;
-        this.mLayoutId = layoutId;
+        this.mLayoutId1 = layoutId;
     }
 
+    public SortDetailAdapter(Context context, List<D> datas, int layotId1, int layoutId2) {
+        this.mContext = context;
+        this.mDatas = datas;
+        this.mLayoutId1 = layotId1;
+        this.mLayoutId2 = layoutId2;
+    }
 
     private int checkedPosition;
 
@@ -53,18 +60,17 @@ public class SortDetailAdapter<D, V extends BaseViewHolder<D>> extends BaseRecyc
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view=null;
-        switch (viewType)
-        {
+        View view = null;
+        switch (viewType) {
             case 0:
-                view= LayoutInflater.from(mContext).inflate(R.layout.item_fragment_sortdetail_title,parent,false);
+                view = LayoutInflater.from(mContext).inflate(R.layout.item_fragment_sortdetail_title, parent, false);
                 break;
             case 1:
-                view=LayoutInflater.from(mContext).inflate(R.layout.item_fragent_sortdetail_content,parent,false);
+                view = LayoutInflater.from(mContext).inflate(R.layout.item_fragent_sortdetail_content, parent, false);
                 break;
         }
 
-        return new SortDetailHolder(view,null);
+        return new SortDetailHolder(view, null);
     }
 
 
