@@ -38,24 +38,20 @@
     <dimen name="dp_61">61dp</dimen>
     <dimen name="dp_70">70dp</dimen>
     <dimen name="dp_107">107dp</dimen>
-<<<<<<< HEAD
     <dimen name="dp_125">125dp</dimen>
     <dimen name="dp_157">157dp</dimen>
     <!--SP-->
     <dimen name="sp_9">9sp</dimen>
     <dimen name="sp_12">12sp</dimen>
     <dimen name="sp_13">13sp</dimen>
-=======
     <dimen name="sp_125">125dp</dimen>
     <dimen name="statusbar_view_height">0dp</dimen>
     <!--SP-->
->>>>>>> a44d4bf41118263161684088cbd2d9d338d39761
     <dimen name="sp_14">14sp</dimen>
     <dimen name="sp_15">15sp</dimen>
     <dimen name="sp_16">16sp</dimen>
     <dimen name="sp_17">17sp</dimen>
     <dimen name="sp_10">10sp</dimen>
-    <dimen name="sp_12">12sp</dimen>
     <dimen name="dp_65">65dp</dimen>
     <dimen name="dp_80">80dp</dimen>
     <dimen name="dp_160">160dp</dimen>

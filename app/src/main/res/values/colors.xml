@@ -19,15 +19,11 @@
     <color name="black_333333">#333333</color>
     <color name="yellow_f3802c">#F3802C</color>
     <color name="gray_cccccc">#cccccc</color>
-<<<<<<< HEAD
     <color name="gray_666666">#666666</color>
     <color name="gray_ececec">#ececec</color>
 
-=======
     <color name="gray_e3e3e3">#E3E3E3</color>
-    <color name="gray_666666">#666666</color>
     <color name="gray_999999">#999999</color>
     <color name="black_55000000">#55000000</color>
     <color name="black_88000000">#88000000</color>
->>>>>>> a44d4bf41118263161684088cbd2d9d338d39761
 </resources>

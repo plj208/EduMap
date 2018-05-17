@@ -70,8 +70,8 @@ public class IndexFragment extends BaseFragment {
     ImageView ivLocation;
     @BindView(R.id.sv_scroll)
     GradationScrollView mScrollView;
-    @BindView(R.id.sv_search)
-    SearchView mSearchView;
+//    @BindView(R.id.sv_search)
+//    SearchView mSearchView;
     private int height;
 
     @BindView(R.id.bn_img)
