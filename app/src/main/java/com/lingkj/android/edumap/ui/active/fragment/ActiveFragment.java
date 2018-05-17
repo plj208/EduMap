@@ -1,11 +1,8 @@
 package com.lingkj.android.edumap.ui.active.fragment;
 
-import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.lingkj.android.edumap.R;
 import com.lingkj.android.edumap.adapter.ActiveAdapter;
@@ -17,8 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 
 /**
  * 时间：2018/5/14

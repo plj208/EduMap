@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/iv_top_image_activity_fragment"
-        android:src="@drawable/bg_choose_class"
-        android:scaleType="fitXY"
-        android:adjustViewBounds="true"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/sp_125" />
+        android:layout_height="@dimen/sp_125"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        tools:src="@drawable/bg_choose_class" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/stl_activity_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:tl_indicator_color="@color/yellow_f3802c"
+        app:tl_indicator_height="@dimen/dp_4"
+        app:tl_indicator_margin_top="@dimen/dp_13"
+        app:tl_textSelectColor="@color/yellow_f3802c"
+        app:tl_textUnselectColor="@color/black_333333"
+        app:tl_textsize="@dimen/sp_14" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_activity_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
