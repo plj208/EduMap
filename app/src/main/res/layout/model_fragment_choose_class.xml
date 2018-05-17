@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
     android:orientation="vertical">
+
+    <View
+        android:id="@+id/fake_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/statusbar_view_height"
+        android:background="@color/colorPrimary"/>
 
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -21,9 +28,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:text="@string/text_choose_course_title"
             android:textColor="@color/black_333333"
-            android:textSize="@dimen/sp_16"
-            android:text="@string/text_choose_course_title" />
+            android:textSize="@dimen/sp_16" />
     </android.support.v7.widget.Toolbar>
 
     <include layout="@layout/layout_line_e3e3e3_1dp" />
@@ -220,7 +227,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+                        tools:itemCount="4"
+                        tools:listitem="@layout/item_model_rv_choose_class" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -277,9 +285,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dp_10"
                             android:layout_below="@+id/tv_worry_title"
                             android:layout_marginLeft="22dp"
+                            android:layout_marginTop="@dimen/dp_10"
                             android:layout_toRightOf="@+id/iv_worry"
                             android:text="提出需求后，专业顾问会全方位的为您匹配优质课程"
                             android:textColor="@color/gray_999999"
@@ -318,11 +326,11 @@
                             android:textSize="14sp" />
 
                         <TextView
-                            android:layout_marginTop="@dimen/dp_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/tv_efficiency_title"
                             android:layout_marginLeft="22dp"
+                            android:layout_marginTop="@dimen/dp_10"
                             android:layout_toRightOf="@+id/iv_efficiency"
                             android:text="根据您的时间安排好试听课程，减少不必要的环节"
                             android:textColor="@color/gray_999999"
@@ -361,11 +369,11 @@
                             android:textSize="14sp" />
 
                         <TextView
-                            android:layout_marginTop="@dimen/dp_10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/tv_selection_title"
                             android:layout_marginLeft="22dp"
+                            android:layout_marginTop="@dimen/dp_10"
                             android:layout_toRightOf="@+id/iv_selection"
                             android:text="提供多家合适您的课程，在此比对选择最合适的课程"
                             android:textColor="@color/gray_999999"
@@ -421,8 +429,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="@color/gray_cccccc"
-                            android:text=">>>" />
+                            android:text=">>>"
+                            android:textColor="@color/gray_cccccc" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -435,8 +443,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="@color/gray_cccccc"
-                            android:text=">>>" />
+                            android:text=">>>"
+                            android:textColor="@color/gray_cccccc" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -449,8 +457,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="@color/gray_cccccc"
-                            android:text=">>>" />
+                            android:text=">>>"
+                            android:textColor="@color/gray_cccccc" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -544,8 +552,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="@color/gray_cccccc"
-                            android:text=">>>" />
+                            android:text=">>>"
+                            android:textColor="@color/gray_cccccc" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -558,8 +566,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="@color/gray_cccccc"
-                            android:text=">>>" />
+                            android:text=">>>"
+                            android:textColor="@color/gray_cccccc" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -652,7 +660,6 @@
                 </LinearLayout>
 
                 <com.flyco.roundview.RoundTextView
-                    android:clickable="true"
                     android:id="@+id/btn_quick_choose_course_fragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -660,6 +667,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="16dp"
+                    android:clickable="true"
                     android:gravity="center"
                     android:paddingBottom="15sp"
                     android:paddingTop="15sp"

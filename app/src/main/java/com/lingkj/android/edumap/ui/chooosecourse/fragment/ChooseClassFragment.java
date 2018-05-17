@@ -18,6 +18,8 @@ import butterknife.OnClick;
  * 描述：选课帮Fragment
  */
 public class ChooseClassFragment extends BaseFragment {
+    @BindView(R.id.fake_status_bar)
+    View mFakeStatusBar;
     @BindView(R.id.rv_select_course_counselor_choose_class_fragment)
     RecyclerView mRecyclerView;
     @BindView(R.id.btn_quick_choose_course_fragment)
@@ -32,7 +34,8 @@ public class ChooseClassFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        ((IndexActivity)getContext()).getToolbar().setVisibility(View.VISIBLE);
+        ((IndexActivity)getContext()).getToolbar().setVisibility(View.GONE);
+        mFakeStatusBar.setBackgroundColor(getResources().getColor(R.color.white));
         mSmartRefreshLayout.setEnableLoadmore(false);
         mSmartRefreshLayout.setEnableAutoLoadmore(false);
         mSmartRefreshLayout.setEnableOverScrollDrag(false);

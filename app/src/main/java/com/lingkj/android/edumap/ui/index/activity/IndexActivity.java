@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
+import com.jaeger.library.StatusBarUtil;
 import com.lingkj.android.edumap.R;
 import com.lingkj.android.edumap.base.BaseActivity;
 import com.lingkj.android.edumap.bean.TabEntity;
@@ -13,6 +14,7 @@ import com.lingkj.android.edumap.customview.NoScrollViewPager;
 import com.lingkj.android.edumap.ui.active.fragment.ActiveFragment;
 import com.lingkj.android.edumap.ui.chooosecourse.fragment.ChooseClassFragment;
 import com.lingkj.android.edumap.ui.index.fragment.IndexFragment;
+import com.lingkj.android.edumap.ui.mine.fragment.MineFragment;
 
 import java.util.ArrayList;
 
@@ -46,6 +48,8 @@ public class IndexActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        StatusBarUtil.setTranslucentForImageViewInFragment(IndexActivity.this, null);
+
         for (int i = 0; i < mTitles.length; i++) {
             mTabEntities.add(new TabEntity(mTitles[i], mIconSelectIds[i], mIconUnselectIds[i]));
         }
@@ -55,7 +59,7 @@ public class IndexActivity extends BaseActivity {
         mModulles.add(new IndexFragment());
         mModulles.add(new ActiveFragment());
         mModulles.add(new ChooseClassFragment());
-        mModulles.add(new IndexFragment());
+        mModulles.add(new MineFragment());
 
 
         mViewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
@@ -87,7 +91,6 @@ public class IndexActivity extends BaseActivity {
         });
 
     }
-
 
 
     @Override
